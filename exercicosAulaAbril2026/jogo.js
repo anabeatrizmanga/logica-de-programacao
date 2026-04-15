@@ -7,7 +7,7 @@ const btLimpar = document.getElementById("btLimpar");
 btResultado.addEventListener("click", Resultado)
 function Resultado() {
 
-    //Verificação dos campos
+    // Verificação dos campos
     var golsA = Number(inTimeA.value);
     var golsB = Number(inTimeB.value);
 
@@ -17,35 +17,37 @@ function Resultado() {
     } else if (inTimeB.value == "" || golsB < 0) {
         alert("Campo do time B está vazio ou incorreto; valor < 0");
         inTimeB.focus();
-    }
-    //empate
-    if (golsA == golsB) {
-        outValorDoJogo.innerHTML = "Empate entre time A e B " + golsA + " x " + golsB;
-    }
-
-    //vitória do time A
-    else if (golsA > golsB) {
-
-        var diferenca = golsA - golsB;
-
-        if (diferenca > 2) {
-            outValorDoJogo.innerHTML = "Time A venceu " + golsA + " x " + golsB + " foi goleada";
-        } else {
-            outValorDoJogo.innerHTML = "Time A venceu " + golsA + " x " + golsB;
+    } else {
+        var diferenca;// valor indefinido, n precisa ficar declarando toda vez
+        // Empate
+        if (golsA == golsB) {
+            outValorDoJogo.innerHTML = "Empate entre time A e B " + golsA + " x " + golsB;
         }
 
-    }
+        // Vitória do time A
+        else if (golsA > golsB) {
 
-    //vitória do time B
-    else {
-        var diferenca = golsB - golsA;
+            diferenca = golsA - golsB;
 
-        if (diferenca > 2) {
-            outValorDoJogo.innerHTML = "Time B venceu " + golsB + " x " + golsA + " foi goleada";
-        } else {
-            outValorDoJogo.innerHTML = "Time B venceu " + golsB + " x " + golsA;
+            if (diferenca > 2) {
+                outValorDoJogo.innerHTML = "Time A venceu " + golsA + " x " + golsB + ", foi goleada";
+            } else {
+                outValorDoJogo.innerHTML = "Time A venceu " + golsA + " x " + golsB;
+            }
+
         }
 
+        // Vitória do time B
+        else {
+            diferenca = golsB - golsA;
+
+            if (diferenca > 2) {
+                outValorDoJogo.innerHTML = "Time B venceu " + golsB + " x " + golsA + ", foi goleada";
+            } else {
+                outValorDoJogo.innerHTML = "Time B venceu " + golsB + " x " + golsA;
+            }
+
+        }
     }
 }
 
