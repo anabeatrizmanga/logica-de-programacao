@@ -25,10 +25,9 @@ function desconto() {
         alert("Campo de preco está vazio ou valor < 0")
     } else if (inQuantidade == "" || quantidade < 0) {
         alert("Campo de preco está vazio ou valor < 0")
-    }else {
-        if 
-
     }
+
+    
 
 
 }
