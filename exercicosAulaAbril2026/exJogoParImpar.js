@@ -5,6 +5,10 @@ const outNumero = document.getElementById("outNumero");
 const outResultado = document.getElementById("outResultado");
 const btJogar = document.getElementById("btJogar");
 
+var pontos = 0;
+var vitoriaSeguidas = 0;
+var derrotasSeguidas = 0;
+
 
 btJogar.addEventListener("click", jogarParImpar);
 function jogarParImpar(){
