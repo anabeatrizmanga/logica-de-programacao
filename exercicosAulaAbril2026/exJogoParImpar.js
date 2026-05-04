@@ -1,8 +1,8 @@
 const inNome = document.getElementById("inNome");
 const rbPar = document.getElementById("rbPar");
 const rbImpar = document.getElementById("rbImpar");
-const outNumero = document.getElementById("outNumero");
-const outResultado = document.getElementById("outResultado");
+const outNumeroGerado = document.getElementById("outNumeroGerado");
+const outResultadoJogo = document.getElementById("outResultadoJogo");
 const btJogar = document.getElementById("btJogar");
 
 var pontos = 0;
@@ -29,6 +29,7 @@ function jogarParImpar(){
         const menorValor = 1; //menor valor do range a ser gerado aleatoriamente
         const maiorValor = 100; //maior valor do range a ser gerado aleatoriamente
         var numAleatorio = Math.floor(Math.random() * (maiorValor - menorValor + 1) + menorValor); 
+        var porcentagemAcertos;
     
         var resultado = (numAleatorio % 2 == 0) ? "Par" : "Ímpar";
         
@@ -41,6 +42,8 @@ function jogarParImpar(){
         } else {
             outResultadoJogo.innerHTML = "Ops " + nome + " você perdeu!";
             outResultadoJogo.style.color = "red";
+        } if {
+
         }
     }
-}
+} 
